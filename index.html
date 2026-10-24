@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NOIR barber booking website" />
+    <title>NOIR — Barber Booking</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="#top" aria-label="NOIR home">NOIR<span>.</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#hours">Hours</a>
+          <a class="nav-cta" href="#booking">Book now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Est. 2014 · New York</p>
+          <h1>Cut sharp.<br /><em>Live bold.</em></h1>
+          <p class="hero-text">A considered barbering experience for those who appreciate the details. Classic craft, modern attitude.</p>
+          <a class="button button-dark" href="#booking">Book appointment <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-image image-frame">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=85" alt="Barber trimming a client's hair" />
+          <span class="image-note">Crafted with intent</span>
+        </div>
+      </section>
+
+      <section class="intro container">
+        <p class="eyebrow">The NOIR standard</p>
+        <h2>More than a haircut.<br /><span>It’s your signature.</span></h2>
+        <p class="intro-text">Every cut begins with a conversation and ends with confidence. Our barbers combine traditional technique with a sharp, contemporary eye.</p>
+      </section>
+
+      <section class="services section-light" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">What we do</p>
+              <h2>Our services</h2>
+            </div>
+            <p>Simple services. Exceptional results.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-number">01</span>
+              <h3>The Signature</h3>
+              <p>Consultation, precision cut, hot towel finish and styling.</p>
+              <strong>$55</strong>
+            </article>
+            <article class="service-card featured-service">
+              <span class="service-number">02</span>
+              <h3>Cut &amp; Beard</h3>
+              <p>A tailored haircut paired with a sculpted beard trim and line-up.</p>
+              <strong>$75</strong>
+            </article>
+            <article class="service-card">
+              <span class="service-number">03</span>
+              <h3>The Clean Up</h3>
+              <p>Keep your look in check with a quick trim, shape and finish.</p>
+              <strong>$35</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery container" id="gallery">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The work</p>
+            <h2>Made in the chair</h2>
+          </div>
+          <p>Every detail has a point of view.</p>
+        </div>
+        <div class="gallery-grid">
+          <img class="gallery-tall" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85" alt="Barber styling a fresh haircut" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85" alt="Classic barber shop interior" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=85" alt="Close-up of a clean haircut" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="visit section-beige" id="hours">
+        <div class="container visit-grid">
+          <div>
+            <p class="eyebrow">Come through</p>
+            <h2>Find your<br /><em>new standard.</em></h2>
+          </div>
+          <div class="hours-list">
+            <h3>Opening hours</h3>
+            <p><span>Monday — Friday</span><strong>9:00 — 20:00</strong></p>
+            <p><span>Saturday</span><strong>10:00 — 18:00</strong></p>
+            <p><span>Sunday</span><strong>Closed</strong></p>
+            <address>41 Mercer Street<br />New York, NY 10013</address>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking container" id="booking">
+        <p class="eyebrow">Ready when you are</p>
+        <h2>Good hair days<br /><em>start here.</em></h2>
+        <form class="booking-form" id="booking-form" novalidate>
+          <div class="form-grid">
+            <label>
+              <span>Full name</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Your name" required />
+            </label>
+            <label>
+              <span>Phone number</span>
+              <input type="tel" name="phone" autocomplete="tel" placeholder="(555) 000-0000" pattern=".{7,}" required />
+            </label>
+            <label>
+              <span>Service</span>
+              <select name="service" required>
+                <option value="" selected disabled>Select a service</option>
+                <option value="signature">The Signature — $55</option>
+                <option value="cut-beard">Cut &amp; Beard — $75</option>
+                <option value="clean-up">The Clean Up — $35</option>
+              </select>
+            </label>
+            <label>
+              <span>Appointment date</span>
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              <span>Preferred time</span>
+              <select name="time" required>
+                <option value="" selected disabled>Select a time</option>
+              </select>
+            </label>
+          </div>
+          <button class="button button-dark" type="submit">Book appointment <span aria-hidden="true">↗</span></button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <a class="logo" href="#top">NOIR<span>.</span></a>
+        <p>© 2024 NOIR Barber Studio</p>
+        <div class="social-links"><a href="#top">Instagram</a><a href="#top">Contact</a></div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
